@@ -3,3 +3,10 @@ __pycache__/
 *$py.class
 .DS_Store
 Thumbs.db
+
+# Internal databanks & reports
+*databank*
+*DataBank*
+*report*
+*Report*
+*.bak
