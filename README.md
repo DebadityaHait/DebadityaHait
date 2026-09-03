@@ -60,12 +60,12 @@ Previous research includes internships at **Samsung R&D Institute India** (light
 
 ## Open Source Contributions
 
-Summary: **59 pull requests across 47 unique repositories** (16 merged upstream, 26 active open) across **Rust, C/C++, Python, Go, and TypeScript**.
+Summary: **59 pull requests across 47 unique repositories** (16 merged upstream, 25 active open) across **Rust, C/C++, Python, Go, and TypeScript**.
 
 <div align="center">
   <img src="https://img.shields.io/badge/Total%20PRs-59-0969da?style=for-the-badge&logo=github&logoColor=white" alt="Total PRs" />
   <img src="https://img.shields.io/badge/Merged%20Upstream-16-238636?style=for-the-badge&logo=git&logoColor=white" alt="Merged PRs" />
-  <img src="https://img.shields.io/badge/Active%20Open-26-8957e5?style=for-the-badge&logo=githubactions&logoColor=white" alt="Open PRs" />
+  <img src="https://img.shields.io/badge/Active%20Open-25-8957e5?style=for-the-badge&logo=githubactions&logoColor=white" alt="Open PRs" />
   <img src="https://img.shields.io/badge/Stack-Rust%20%7C%20C%2B%2B%20%7C%20Python%20%7C%20Go%20%7C%20TS-d97706?style=for-the-badge" alt="Languages" />
 </div>
 
