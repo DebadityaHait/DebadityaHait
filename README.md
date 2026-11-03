@@ -50,9 +50,9 @@ Previous research includes internships at **Samsung R&D Institute India** (light
 <!-- Quick Stat Grid -->
 <div align="center">
 
-| Open Source PRs | Merged Upstream | Competitive Rating | Certifications | Education |
+| Open Source PRs | Merged Contributions | Competitive Rating | Certifications | Education |
 | :---: | :---: | :---: | :---: | :---: |
-| **59 Pull Requests**<br/>*(47 Unique Codebases)* | **19 Merged PRs**<br/>*(TensorFlow, PyTorch, pnpm, Vite)* | [**LeetCode Guardian**](https://leetcode.com/u/zazamama/) (Top 2%)<br/>[**Codeforces Expert**](https://codeforces.com/profile/zazaman) • [**CodeChef 5★**](https://www.codechef.com/users/debadityahait) | **9x Microsoft Certified**<br/>**Claude Certified Architect** | **BTech CSE @ SRMIST**<br/>**BS Data Science @ IIT Madras** |
+| **59 Public Pull Requests**<br/>*(47 Unique Codebases)* | **21 Merged Contributions**<br/>*(TensorFlow, PyTorch, pnpm, Vite)* | [**LeetCode Guardian**](https://leetcode.com/u/zazamama/) (Top 2%)<br/>[**Codeforces Expert**](https://codeforces.com/profile/zazaman) • [**CodeChef 5★**](https://www.codechef.com/users/debadityahait) | **9x Microsoft Certified**<br/>**Claude Certified Architect** | **BTech CSE @ SRMIST**<br/>**BS Data Science @ IIT Madras** |
 
 </div>
 
@@ -60,11 +60,11 @@ Previous research includes internships at **Samsung R&D Institute India** (light
 
 ## Open Source Contributions
 
-Summary: **59 pull requests across 47 unique repositories** (19 merged upstream, 17 active open) across **Rust, C/C++, Python, Go, and TypeScript**.
+Summary: **59 public pull requests across 47 unique repositories** (21 merged contributions, 17 active open) across **Rust, C/C++, Python, Go, and TypeScript**. The merged count includes one PR in a private repository and a PyTorch contribution integrated as a commit.
 
 <div align="center">
   <img src="https://img.shields.io/badge/Total%20PRs-59-0969da?style=for-the-badge&logo=github&logoColor=white" alt="Total PRs" />
-  <img src="https://img.shields.io/badge/Merged%20Upstream-19-238636?style=for-the-badge&logo=git&logoColor=white" alt="Merged PRs" />
+  <img src="https://img.shields.io/badge/Merged%20Contributions-21-238636?style=for-the-badge&logo=git&logoColor=white" alt="Merged contributions" />
   <img src="https://img.shields.io/badge/Active%20Open-17-8957e5?style=for-the-badge&logo=githubactions&logoColor=white" alt="Open PRs" />
   <img src="https://img.shields.io/badge/Stack-Rust%20%7C%20C%2B%2B%20%7C%20Python%20%7C%20Go%20%7C%20TS-d97706?style=for-the-badge" alt="Languages" />
 </div>
@@ -101,6 +101,24 @@ Summary: **59 pull requests across 47 unique repositories** (19 merged upstream,
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td><b>Ruff</b><br/><a href="https://github.com/astral-sh/ruff"><code>astral-sh/ruff</code></a></td>
+      <td><a href="https://github.com/astral-sh/ruff/pull/28186"><b>#28186</b></a><br/><img src="https://img.shields.io/badge/Merged-238636?style=flat-square&amp;logo=github&amp;logoColor=white" alt="Merged" /></td>
+      <td><code>Rust</code><br/><code>+56 / -0</code></td>
+      <td>Prevented a false positive for <code>RUF061</code> when <code>pytest.raises</code> is used in a <code>with</code> statement.</td>
+    </tr>
+    <tr>
+      <td><b>Apache DataFusion Ballista</b><br/><a href="https://github.com/apache/datafusion-ballista"><code>apache/datafusion-ballista</code></a></td>
+      <td><a href="https://github.com/apache/datafusion-ballista/pull/2397"><b>#2397</b></a><br/><img src="https://img.shields.io/badge/Merged-238636?style=flat-square&amp;logo=github&amp;logoColor=white" alt="Merged" /></td>
+      <td><code>Rust</code><br/><code>+657 / -27</code></td>
+      <td>Documented the scheduler REST API with OpenAPI and added an endpoint for its specification.</td>
+    </tr>
+    <tr>
+      <td><b>Node Version Manager</b><br/><a href="https://github.com/nvm-sh/nvm"><code>nvm-sh/nvm</code></a></td>
+      <td><a href="https://github.com/nvm-sh/nvm/pull/3891"><b>#3891</b></a><br/><img src="https://img.shields.io/badge/Merged-238636?style=flat-square&amp;logo=github&amp;logoColor=white" alt="Merged" /></td>
+      <td><code>Shell</code></td>
+      <td>Handled Zsh <code>extendedglob</code> while reading an alias file.</td>
+    </tr>
     <tr>
       <td>
         <b>Rust-Native pnpm Engine</b><br/>
@@ -417,7 +435,6 @@ Summary: **59 pull requests across 47 unique repositories** (19 merged upstream,
 
 | Repository | PR Link | Stack | Technical Focus |
 | :--- | :---: | :---: | :--- |
-| **Apache DataFusion Ballista**<br/>[`apache/datafusion-ballista`](https://github.com/apache/datafusion-ballista)<br/><img src="https://img.shields.io/github/stars/apache/datafusion-ballista?style=flat-square&logo=github&color=21262d" alt="Ballista stars" /> | [#2397](https://github.com/apache/datafusion-ballista/pull/2397) | `Rust` `utoipa` `+523 / -26` | OpenAPI v3 specification generator and JSON endpoint for distributed scheduler. |
 | **Delta Lake Core**<br/>[`delta-io/delta-rs`](https://github.com/delta-io/delta-rs)<br/><img src="https://img.shields.io/github/stars/delta-io/delta-rs?style=flat-square&logo=github&color=21262d" alt="delta-rs stars" /> | [#4685](https://github.com/delta-io/delta-rs/pull/4685) | `Rust` `Parquet` `+43 / -4` | Nested struct field override preservation for DataFusion Parquet leaf pruning. |
 | **Hugging Face Safetensors**<br/>[`huggingface/safetensors`](https://github.com/huggingface/safetensors)<br/><img src="https://img.shields.io/github/stars/huggingface/safetensors?style=flat-square&logo=github&color=21262d" alt="safetensors stars" /> | [#826](https://github.com/safetensors/safetensors/pull/826) | `Rust` `Python` `+34 / -3` | Strict memory-layout validation rejecting non-C-contiguous NumPy arrays. |
 | **Kubernetes Core**<br/>[`kubernetes/kubernetes`](https://github.com/kubernetes/kubernetes)<br/><img src="https://img.shields.io/github/stars/kubernetes/kubernetes?style=flat-square&logo=github&color=21262d" alt="kubernetes stars" /> | [#140791](https://github.com/kubernetes/kubernetes/pull/140791) | `Go` `Kubelet` `+57 / -4` | Pre-allocation bypass for zero-valued device requests in Kubelet Device Manager. |
@@ -436,7 +453,6 @@ Summary: **59 pull requests across 47 unique repositories** (19 merged upstream,
 | **Storybook Ecosystem**<br/>[`storybookjs/storybook`](https://github.com/storybookjs/storybook)<br/><img src="https://img.shields.io/github/stars/storybookjs/storybook?style=flat-square&logo=github&color=21262d" alt="storybook stars" /> | [#35520](https://github.com/storybookjs/storybook/pull/35520) | `TypeScript` `+250 / -10` | Angular Signal Query isolation preventing property overwrites in decorators. |
 | **Microsoft PowerToys**<br/>[`microsoft/PowerToys`](https://github.com/microsoft/PowerToys)<br/><img src="https://img.shields.io/github/stars/microsoft/PowerToys?style=flat-square&logo=github&color=21262d" alt="PowerToys stars" /> | [#49375](https://github.com/microsoft/PowerToys/pull/49375) | `C++` `+56 / -10` | Culture-aware digit formatting for Command Palette calculator results. |
 | **Pytest Framework**<br/>[`pytest-dev/pytest`](https://github.com/pytest-dev/pytest)<br/><img src="https://img.shields.io/github/stars/pytest-dev/pytest?style=flat-square&logo=github&color=21262d" alt="pytest stars" /> | [#14707](https://github.com/pytest-dev/pytest/pull/14707) | `Python` `+69 / -13` | Custom TOML file root table parsing for `pytest -c` executions. |
-| **Node Version Manager**<br/>[`nvm-sh/nvm`](https://github.com/nvm-sh/nvm)<br/><img src="https://img.shields.io/github/stars/nvm-sh/nvm?style=flat-square&logo=github&color=21262d" alt="nvm stars" /> | [#3891](https://github.com/nvm-sh/nvm/pull/3891) | `Shell` `+45 / -0` | Shell trap restoration for Zsh `extendedglob` terminal settings. |
 | **Nx Monorepo Toolkit**<br/>[`nrwl/nx`](https://github.com/nrwl/nx)<br/><img src="https://img.shields.io/github/stars/nrwl/nx?style=flat-square&logo=github&color=21262d" alt="nx stars" /> | [#36347](https://github.com/nrwl/nx/pull/36347) | `TypeScript` `+409 / -452` | Compiler plugin migration to `minimizer-webpack-plugin` with `cssnano`. |
 | **NousResearch Hermes Agent**<br/>[`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent)<br/><img src="https://img.shields.io/github/stars/NousResearch/hermes-agent?style=flat-square&logo=github&color=21262d" alt="hermes stars" /> | [#70711](https://github.com/NousResearch/hermes-agent/pull/70711) | `Python` `+63 / -2` | Local slash command auto-completion support in terminal interface. |
 | **NousResearch Hermes Agent**<br/>[`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent)<br/><img src="https://img.shields.io/github/stars/NousResearch/hermes-agent?style=flat-square&logo=github&color=21262d" alt="hermes stars" /> | [#70381](https://github.com/NousResearch/hermes-agent/pull/70381) | `TypeScript` `+175 / -1` | Reactive state refresh hooks for active chat sessions in dashboard UI. |

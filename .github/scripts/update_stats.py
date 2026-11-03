@@ -27,7 +27,7 @@ def fetch_json(endpoint):
 
 def get_stats():
     # 1. Total PRs & Unique Repos
-    total_data = fetch_json(f"/search/issues?q=author:{USERNAME}+type:pr&per_page=100")
+    total_data = fetch_json(f"/search/issues?q=author:{USERNAME}+type:pr+is:public&per_page=100")
     if not total_data:
         print("Failed to fetch total PR data.", file=sys.stderr)
         sys.exit(1)
@@ -39,7 +39,7 @@ def get_stats():
     # If there are more than 100 PRs, paginate
     page = 2
     while len(items) < total_prs and page <= 5:
-        paged_data = fetch_json(f"/search/issues?q=author:{USERNAME}+type:pr&per_page=100&page={page}")
+        paged_data = fetch_json(f"/search/issues?q=author:{USERNAME}+type:pr+is:public&per_page=100&page={page}")
         if not paged_data or not paged_data.get("items"):
             break
         paged_items = paged_data.get("items", [])
@@ -47,13 +47,28 @@ def get_stats():
         unique_repos = len(set(item["repository_url"].replace("https://api.github.com/repos/", "") for item in items))
         page += 1
 
-    # 2. Merged PRs
-    merged_data = fetch_json(f"/search/issues?q=author:{USERNAME}+type:pr+is:merged")
-    merged_prs = merged_data.get("total_count", 0) if merged_data else 0
+    # 2. Merged Contributions
+    merged_data = fetch_json(f"/search/issues?q=author:{USERNAME}+type:pr+is:public+is:merged")
+    if merged_data is None:
+        sys.exit("Failed to fetch merged PR data.")
+    # One additional merged PR is in a private repository, which the
+    # profile workflow token cannot access. Update this baseline if needed.
+    merged_prs = merged_data["total_count"] + 1
+
+    # PyTorch integrated this PR as a commit but GitHub marks the PR closed.
+    # Count it once until GitHub itself reports the PR as merged.
+    pytorch_pr = fetch_json("/repos/pytorch/pytorch/pulls/191831")
+    pytorch_commit = fetch_json("/repos/pytorch/pytorch/commits/30731ee8f01763cf1d32dc2e3962f51fc034c482")
+    if pytorch_pr is None or pytorch_commit is None:
+        sys.exit("Failed to verify the integrated PyTorch contribution.")
+    if not pytorch_pr.get("merged"):
+        merged_prs += 1
 
     # 3. Open PRs
-    open_data = fetch_json(f"/search/issues?q=author:{USERNAME}+type:pr+is:open")
-    open_prs = open_data.get("total_count", 0) if open_data else 0
+    open_data = fetch_json(f"/search/issues?q=author:{USERNAME}+type:pr+is:public+is:open")
+    if open_data is None:
+        sys.exit("Failed to fetch open PR data.")
+    open_prs = open_data["total_count"]
 
     return {
         "total_prs": total_prs,
@@ -74,8 +89,8 @@ def update_readme(stats, readme_path="README.md"):
 
     # Update summary text
     content = re.sub(
-        r"Summary:\s*\*\*\d+\s+pull requests across\s+\d+\s+unique repositories\*\*\s*\(\d+\s+merged upstream,\s*\d+\s+active open\)",
-        f"Summary: **{stats['total_prs']} pull requests across {stats['unique_repos']} unique repositories** ({stats['merged_prs']} merged upstream, {stats['open_prs']} active open)",
+        r"Summary:\s*\*\*\d+\s+public pull requests across\s+\d+\s+unique repositories\*\*\s*\(\d+\s+merged contributions,\s*\d+\s+active open\)",
+        f"Summary: **{stats['total_prs']} public pull requests across {stats['unique_repos']} unique repositories** ({stats['merged_prs']} merged contributions, {stats['open_prs']} active open)",
         content,
     )
 
@@ -86,8 +101,8 @@ def update_readme(stats, readme_path="README.md"):
         content,
     )
     content = re.sub(
-        r"badge/Merged%20Upstream-\d+-238636",
-        f"badge/Merged%20Upstream-{stats['merged_prs']}-238636",
+        r"badge/Merged%20Contributions-\d+-238636",
+        f"badge/Merged%20Contributions-{stats['merged_prs']}-238636",
         content,
     )
     content = re.sub(
@@ -98,13 +113,13 @@ def update_readme(stats, readme_path="README.md"):
 
     # Update Quick Stat Table
     content = re.sub(
-        r"\|\s*\*\*\d+\s+Pull Requests\*\*<br/>\s*\*?\(\d+\s+Unique Codebases\)\*?\s*\|\s*\*\*\d+\s+Merged PRs\*\*",
-        f"| **{stats['total_prs']} Pull Requests**<br/>*({stats['unique_repos']} Unique Codebases)* | **{stats['merged_prs']} Merged PRs**",
+        r"\|\s*\*\*\d+\s+Public Pull Requests\*\*<br/>\s*\*?\(\d+\s+Unique Codebases\)\*?\s*\|\s*\*\*\d+\s+Merged Contributions\*\*",
+        f"| **{stats['total_prs']} Public Pull Requests**<br/>*({stats['unique_repos']} Unique Codebases)* | **{stats['merged_prs']} Merged Contributions**",
         content,
     )
 
     if content != original_content:
-        with open(readme_path, "w", encoding="utf-8") as f:
+        with open(readme_path, "w", encoding="utf-8", newline="") as f:
             f.write(content)
         print(f"README.md successfully updated with live stats: {stats}")
     else:
