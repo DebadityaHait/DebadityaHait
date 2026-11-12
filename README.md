@@ -52,7 +52,7 @@ Previous research includes internships at **Samsung R&D Institute India** (light
 
 | Open Source PRs | Merged Contributions | Competitive Rating | Certifications | Education |
 | :---: | :---: | :---: | :---: | :---: |
-| **59 Public Pull Requests**<br/>*(47 Unique Codebases)* | **21 Merged Contributions**<br/>*(TensorFlow, PyTorch, pnpm, Vite)* | [**LeetCode Guardian**](https://leetcode.com/u/zazamama/) (Top 2%)<br/>[**Codeforces Expert**](https://codeforces.com/profile/zazaman) • [**CodeChef 5★**](https://www.codechef.com/users/debadityahait) | **9x Microsoft Certified**<br/>**Claude Certified Architect** | **BTech CSE @ SRMIST**<br/>**BS Data Science @ IIT Madras** |
+| **60 Public Pull Requests**<br/>*(48 Unique Codebases)* | **21 Merged Contributions**<br/>*(TensorFlow, PyTorch, pnpm, Vite)* | [**LeetCode Guardian**](https://leetcode.com/u/zazamama/) (Top 2%)<br/>[**Codeforces Expert**](https://codeforces.com/profile/zazaman) • [**CodeChef 5★**](https://www.codechef.com/users/debadityahait) | **9x Microsoft Certified**<br/>**Claude Certified Architect** | **BTech CSE @ SRMIST**<br/>**BS Data Science @ IIT Madras** |
 
 </div>
 
@@ -60,12 +60,12 @@ Previous research includes internships at **Samsung R&D Institute India** (light
 
 ## Open Source Contributions
 
-Summary: **59 public pull requests across 47 unique repositories** (21 merged contributions, 15 active open) across **Rust, C/C++, Python, Go, and TypeScript**. The merged count includes one PR in a private repository and a PyTorch contribution integrated as a commit.
+Summary: **60 public pull requests across 48 unique repositories** (21 merged contributions, 16 active open) across **Rust, C/C++, Python, Go, and TypeScript**. The merged count includes one PR in a private repository and a PyTorch contribution integrated as a commit.
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20PRs-59-0969da?style=for-the-badge&logo=github&logoColor=white" alt="Total PRs" />
+  <img src="https://img.shields.io/badge/Total%20PRs-60-0969da?style=for-the-badge&logo=github&logoColor=white" alt="Total PRs" />
   <img src="https://img.shields.io/badge/Merged%20Contributions-21-238636?style=for-the-badge&logo=git&logoColor=white" alt="Merged contributions" />
-  <img src="https://img.shields.io/badge/Active%20Open-15-8957e5?style=for-the-badge&logo=githubactions&logoColor=white" alt="Open PRs" />
+  <img src="https://img.shields.io/badge/Active%20Open-16-8957e5?style=for-the-badge&logo=githubactions&logoColor=white" alt="Open PRs" />
   <img src="https://img.shields.io/badge/Stack-Rust%20%7C%20C%2B%2B%20%7C%20Python%20%7C%20Go%20%7C%20TS-d97706?style=for-the-badge" alt="Languages" />
 </div>
 
